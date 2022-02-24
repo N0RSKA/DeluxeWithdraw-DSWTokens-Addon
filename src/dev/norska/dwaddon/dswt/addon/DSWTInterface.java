@@ -12,12 +12,12 @@ public class DSWTInterface implements DWAddonInterface {
 
 	@Override
 	public void add(Player p, Double amount) {
-		DeluxeSellwandsAPI.addPlayerTokens(p, amount.intValue());
+		DeluxeSellwandsAPI.addPlayerTokens(p.getUniqueId(), amount.intValue());
 	}
 
 	@Override
 	public void add(Player p, Integer amount) {
-		DeluxeSellwandsAPI.addPlayerTokens(p, amount);
+		DeluxeSellwandsAPI.addPlayerTokens(p.getUniqueId(), amount);
 	}
 
 	@Override
@@ -37,17 +37,17 @@ public class DSWTInterface implements DWAddonInterface {
 
 	@Override
 	public Double getCurrent(Player p) {
-		return (double) DeluxeSellwandsAPI.getPlayerTokens(p);
+		return (double) DeluxeSellwandsAPI.getPlayerTokens(p.getUniqueId());
 	}
 
 	@Override
 	public Boolean has(Player p, Double amount) {
-		return DeluxeSellwandsAPI.getPlayerTokens(p) >= amount;
+		return DeluxeSellwandsAPI.getPlayerTokens(p.getUniqueId()) >= amount;
 	}
 
 	@Override
 	public Boolean has(Player p, Integer amount) {
-		return DeluxeSellwandsAPI.getPlayerTokens(p) >= amount;
+		return DeluxeSellwandsAPI.getPlayerTokens(p.getUniqueId()) >= amount;
 	}
 
 	@Override
@@ -78,12 +78,12 @@ public class DSWTInterface implements DWAddonInterface {
 
 	@Override
 	public void take(Player p, Double amount) {
-		DeluxeSellwandsAPI.takePlayerTokens(p, amount.intValue());
+		DeluxeSellwandsAPI.takePlayerTokens(p.getUniqueId(), amount.intValue());
 	}
 
 	@Override
 	public void take(Player p, Integer amount) {
-		DeluxeSellwandsAPI.takePlayerTokens(p, amount);
+		DeluxeSellwandsAPI.takePlayerTokens(p.getUniqueId(), amount);
 	}
 
 	@Override

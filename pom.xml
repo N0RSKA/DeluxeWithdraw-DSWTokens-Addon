@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.norska.dwaddon.dswt</groupId>
   <artifactId>DeluxeWithdrawDSWTokensAddon</artifactId>
-  <version>1</version>
+  <version>1a</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -57,7 +57,7 @@
   <dependency>
 	    <groupId>com.github.N0RSKA</groupId>
 	    <artifactId>DeluxeSellwandsAPI</artifactId>
-	    <version>28</version>
+	    <version>28a</version>
 	</dependency>
   </dependencies>
 </project>
