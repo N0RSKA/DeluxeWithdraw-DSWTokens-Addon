@@ -97,4 +97,9 @@ public class DSWTInterface implements DWAddonInterface {
 		DSWTAddon.getInstance().cache();
 	}
 
+	@Override
+	public Boolean useInt() {
+		return true;
+	}
+
 }

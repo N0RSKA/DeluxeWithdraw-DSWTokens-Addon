@@ -1,6 +1,6 @@
 name: DeluxeWithdrawDSWTokensAddon
 main: dev.norska.dwaddon.dswt.DSWTAddon
-version: Build 1a
+version: Build 1b
 author: Norska
 website: "https://norska.dev"
 api-version: 1.13
