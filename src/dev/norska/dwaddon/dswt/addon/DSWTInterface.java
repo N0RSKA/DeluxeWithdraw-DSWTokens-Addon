@@ -2,6 +2,7 @@ package dev.norska.dwaddon.dswt.addon;
 
 import java.util.List;
 
+import dev.norska.dsw.DeluxeSellwands;
 import org.bukkit.entity.Player;
 
 import dev.norska.dsw.api.DeluxeSellwandsAPI;
@@ -12,12 +13,12 @@ public class DSWTInterface implements DWAddonInterface {
 
 	@Override
 	public void add(Player p, Double amount) {
-		DeluxeSellwandsAPI.addPlayerTokens(p.getUniqueId(), amount.intValue());
+		DeluxeSellwands.getInstance().getAPI().addPlayerTokens(p.getUniqueId(), amount.intValue());
 	}
 
 	@Override
 	public void add(Player p, Integer amount) {
-		DeluxeSellwandsAPI.addPlayerTokens(p.getUniqueId(), amount);
+		DeluxeSellwands.getInstance().getAPI().addPlayerTokens(p.getUniqueId(), amount);
 	}
 
 	@Override
@@ -37,17 +38,17 @@ public class DSWTInterface implements DWAddonInterface {
 
 	@Override
 	public Double getCurrent(Player p) {
-		return (double) DeluxeSellwandsAPI.getPlayerTokens(p.getUniqueId());
+		return (double) DeluxeSellwands.getInstance().getAPI().getPlayerTokens(p.getUniqueId());
 	}
 
 	@Override
 	public Boolean has(Player p, Double amount) {
-		return DeluxeSellwandsAPI.getPlayerTokens(p.getUniqueId()) >= amount;
+		return DeluxeSellwands.getInstance().getAPI().getPlayerTokens(p.getUniqueId()) >= amount;
 	}
 
 	@Override
 	public Boolean has(Player p, Integer amount) {
-		return DeluxeSellwandsAPI.getPlayerTokens(p.getUniqueId()) >= amount;
+		return DeluxeSellwands.getInstance().getAPI().getPlayerTokens(p.getUniqueId()) >= amount;
 	}
 
 	@Override
@@ -78,12 +79,12 @@ public class DSWTInterface implements DWAddonInterface {
 
 	@Override
 	public void take(Player p, Double amount) {
-		DeluxeSellwandsAPI.takePlayerTokens(p.getUniqueId(), amount.intValue());
+		DeluxeSellwands.getInstance().getAPI().takePlayerTokens(p.getUniqueId(), amount.intValue());
 	}
 
 	@Override
 	public void take(Player p, Integer amount) {
-		DeluxeSellwandsAPI.takePlayerTokens(p.getUniqueId(), amount);
+		DeluxeSellwands.getInstance().getAPI().takePlayerTokens(p.getUniqueId(), amount);
 	}
 
 	@Override

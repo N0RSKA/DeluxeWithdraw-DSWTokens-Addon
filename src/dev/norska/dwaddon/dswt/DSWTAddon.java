@@ -2,10 +2,9 @@ package dev.norska.dwaddon.dswt;
 
 import java.io.IOException;
 
+import dev.norska.niridiumcolorapi.IridiumColorAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
 import dev.norska.dw.DeluxeWithdraw;
 import dev.norska.dwaddon.dswt.addon.DSWTInterface;
@@ -23,8 +22,8 @@ public class DSWTAddon extends JavaPlugin {
 	public String prefix;
 	
 	public void onEnable() {
-		
-		prefix = Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18") ? 
+
+		prefix = Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18") || Bukkit.getVersion().contains("1.19") || Bukkit.getVersion().contains("1.20") || Bukkit.getVersion().contains("1.21") ?
 				IridiumColorAPI.process("§8[<GRADIENT:FFE818>&lDW Addon (DSW Tokens)</GRADIENT:B7FF1D>§8]§r") :
 				IridiumColorAPI.process("&8[&e&lDW Addon (DSW Tokens)&8]&r");
 		
@@ -34,7 +33,7 @@ public class DSWTAddon extends JavaPlugin {
 		
 		if (Bukkit.getServer().getPluginManager().getPlugin("DeluxeWithdraw") == null) {
 			Bukkit.getConsoleSender().sendMessage(prefix + " §fCould not find DeluxeWithdraw, disabling plugin.");
-			Bukkit.getConsoleSender().sendMessage(prefix + " §fPurchase the resource from here: §chttps://norska.dev/r/spigot/dw/§f, §chttps://norska.dev/r/polymart/dw/");
+			Bukkit.getConsoleSender().sendMessage(prefix + " §fPurchase the resource from here: §chttps://norska.dev/r/bbb/dw/§f, §chttps://norska.dev/r/spigot/dw/§f, §chttps://norska.dev/r/polymart/dw/");
 			getServer().getPluginManager().disablePlugin(this);
 			return;
 		} 

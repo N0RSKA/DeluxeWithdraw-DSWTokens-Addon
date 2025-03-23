@@ -1,6 +1,6 @@
-name: DeluxeWithdrawDSWTokensAddon
+name: DWA-DeluxeSellwands
 main: dev.norska.dwaddon.dswt.DSWTAddon
-version: Build 1b
+version: 2025.03
 author: Norska
 website: "https://norska.dev"
 api-version: 1.13
